@@ -2,10 +2,10 @@ package `in`.nehalpatel.sdjickotlin
 
 import android.content.Intent
 import android.net.Uri
-import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.view.View
-import java.net.URI
+import android.widget.EditText
+import androidx.appcompat.app.AppCompatActivity
 
 class ImplicitIntentDemoActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -19,6 +19,18 @@ class ImplicitIntentDemoActivity : AppCompatActivity() {
     }
     fun handleCallMe(view: View) {
         val intent = Intent(Intent.ACTION_DIAL, Uri.parse("tel:9558815342"))
+        startActivity(intent)
+    }
+
+    fun handleSendEmail(view: View) {
+
+        val to = findViewById<EditText>(R.id.etEmailAddress)
+        val subject = findViewById<EditText>(R.id.etEmailSubject)
+        val body = findViewById<EditText>(R.id.etEmailBody)
+
+        val intent = Intent(Intent.ACTION_VIEW)
+        val data = Uri.parse("mailto:?subject=" + subject.text.toString() + "&body=" + body.text.toString() + "&to=" + to.text.toString())
+        intent.data = data
         startActivity(intent)
     }
 }
