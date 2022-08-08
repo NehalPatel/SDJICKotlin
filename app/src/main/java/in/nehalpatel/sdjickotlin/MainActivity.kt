@@ -23,4 +23,9 @@ class MainActivity : AppCompatActivity() {
         val intent = Intent(this, ImplicitIntentDemoActivity::class.java)
         startActivity(intent)
     }
+
+    fun handleOnClickShareData(view: View) {
+        val intent = Intent(this, ShareDataActivity::class.java)
+        startActivity(intent)
+    }
 }
