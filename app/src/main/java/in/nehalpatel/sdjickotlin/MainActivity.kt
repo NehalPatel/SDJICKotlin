@@ -28,4 +28,9 @@ class MainActivity : AppCompatActivity() {
         val intent = Intent(this, ShareDataActivity::class.java)
         startActivity(intent)
     }
+
+    fun handleOnClickOpenGallery(view: View) {
+        val intent = Intent(this, GalleryImagesActivity::class.java)
+        startActivity(intent)
+    }
 }

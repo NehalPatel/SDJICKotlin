@@ -3,11 +3,14 @@
   <component name="DesignSurface">
     <option name="filePathToZoomLevelMap">
       <map>
+        <entry key="..\:/android/SDJICKotlin/app/src/main/res/layout/activity_demo_main.xml" value="0.2384428223844282" />
+        <entry key="..\:/android/SDJICKotlin/app/src/main/res/layout/activity_gallery_images.xml" value="0.20416666666666666" />
         <entry key="..\:/android/SDJICKotlin/app/src/main/res/layout/activity_implicit_intent_demo.xml" value="0.20416666666666666" />
         <entry key="..\:/android/SDJICKotlin/app/src/main/res/layout/activity_intent_demo.xml" value="0.20416666666666666" />
         <entry key="..\:/android/SDJICKotlin/app/src/main/res/layout/activity_intent_demo_result.xml" value="0.19010416666666666" />
         <entry key="..\:/android/SDJICKotlin/app/src/main/res/layout/activity_main.xml" value="0.5367316341829086" />
         <entry key="..\:/android/SDJICKotlin/app/src/main/res/layout/activity_share_data.xml" value="0.20416666666666666" />
+        <entry key="..\:/android/SDJICKotlin/app/src/main/res/layout/content_main.xml" value="0.20416666666666666" />
         <entry key="..\:/android/SDJICKotlin/app/src/main/res/layout/fragment_app_logo.xml" value="0.33" />
       </map>
     </option>
