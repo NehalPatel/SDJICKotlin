@@ -33,4 +33,9 @@ class MainActivity : AppCompatActivity() {
         val intent = Intent(this, GalleryImagesActivity::class.java)
         startActivity(intent)
     }
+
+    fun OnClickDBDemo(view: View) {
+        val intent = Intent(this, DBDemoActivity::class.java)
+        startActivity(intent)
+    }
 }
