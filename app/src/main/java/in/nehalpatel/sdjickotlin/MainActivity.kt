@@ -14,6 +14,11 @@ class MainActivity : AppCompatActivity() {
         getSupportActionBar()?.hide()
     }
 
+    fun OnLifeCycleDemo(view: View) {
+        val intent = Intent(this, LifeCycleDemoActivity::class.java)
+        startActivity(intent)
+    }
+
     fun handleOnClickEvent(view: View) {
         val intent = Intent(this, IntentDemoActivity::class.java)
         startActivity(intent)
