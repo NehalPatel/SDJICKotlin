@@ -1,12 +1,14 @@
 package `in`.nehalpatel.sdjickotlin
 
+import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.util.Log
+import android.view.View
 
 class LifeCycleDemoActivity : AppCompatActivity() {
 
-    private var TAG = "SDJIC"
+    private var TAG = "TYBCA"
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_life_cycle_demo)
@@ -42,5 +44,10 @@ class LifeCycleDemoActivity : AppCompatActivity() {
     override fun onDestroy() {
         super.onDestroy()
         Log.d(TAG, "onDestroy Activity Called : LifeCycleDemoActivity")
+    }
+
+    fun openSecondActivity(view: View) {
+        val intent = Intent(this, SecondActivity::class.java)
+        startActivity(intent)
     }
 }
