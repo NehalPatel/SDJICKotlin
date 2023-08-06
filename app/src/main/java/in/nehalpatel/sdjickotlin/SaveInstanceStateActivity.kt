@@ -15,6 +15,11 @@ class SaveInstanceStateActivity : AppCompatActivity() {
         setContentView(R.layout.activity_save_instance_state)
 
         tvCounter = findViewById<TextView>(R.id.tvCounter)
+
+        //get counter variable from shared preferences
+        val pref = getSharedPreferences("myprefs", MODE_PRIVATE)
+        counter = pref.getInt("counter", 0)
+        tvCounter?.text = counter.toString()
     }
 
     fun decreseCounter(view: View) {
@@ -37,5 +42,10 @@ class SaveInstanceStateActivity : AppCompatActivity() {
         tvCounter?.text = counter.toString()
     }
 
-    fun onClickSaveInstance(view: View) {}
+    fun onClickSaveInstance(view: View) {
+        val pref = getSharedPreferences("myprefs", MODE_PRIVATE)
+        val editor = pref.edit()
+        editor.putInt("counter", counter)
+        editor.apply()
+    }
 }
