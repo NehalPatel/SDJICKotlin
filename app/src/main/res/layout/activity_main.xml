@@ -20,22 +20,56 @@
         app:srcCompat="@drawable/sdjic_hd" />
 
     <Button
-        android:id="@+id/btnIntentDemo"
-        android:layout_width="wrap_content"
+        android:id="@+id/btnLifeCycle"
+        android:layout_width="0dp"
         android:layout_height="wrap_content"
+        android:layout_marginStart="32dp"
         android:layout_marginTop="32dp"
+        android:layout_marginEnd="32dp"
         android:backgroundTint="@color/primary"
-        android:onClick="handleOnClickEvent"
-        android:text="Explicit Intent Demo"
+        android:onClick="OnLifeCycleDemo"
+        android:text="Activity Lifecycle"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/imageView" />
 
     <Button
-        android:id="@+id/btnImplicitIntentDemo"
-        android:layout_width="wrap_content"
+        android:id="@+id/btnSaveState"
+        android:layout_width="0dp"
         android:layout_height="wrap_content"
+        android:layout_marginStart="32dp"
         android:layout_marginTop="8dp"
+        android:layout_marginEnd="32dp"
+        android:backgroundTint="@color/primary"
+        android:onClick="OnClickSaveState"
+        android:text="Save Instance State"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/btnLifeCycle" />
+
+    <Button
+        android:id="@+id/btnIntentDemo"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="32dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="32dp"
+        android:backgroundTint="@color/primary"
+        android:onClick="handleSaveInstanceState"
+        android:text="Explicit Intent Demo"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/btnSaveState" />
+
+    <Button
+        android:id="@+id/btnImplicitIntentDemo"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="32dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="32dp"
         android:backgroundTint="@color/primary"
         android:onClick="handleOnClickImplicitIntent"
         android:text="Implicit Intent Demo"
@@ -45,9 +79,11 @@
 
     <Button
         android:id="@+id/btnShareDataDemo"
-        android:layout_width="wrap_content"
+        android:layout_width="0dp"
         android:layout_height="wrap_content"
+        android:layout_marginStart="32dp"
         android:layout_marginTop="8dp"
+        android:layout_marginEnd="32dp"
         android:backgroundTint="@color/primary"
         android:onClick="handleOnClickShareData"
         android:text="Share Data Demo"
@@ -57,9 +93,11 @@
 
     <Button
         android:id="@+id/btnOpenGallery"
-        android:layout_width="wrap_content"
+        android:layout_width="0dp"
         android:layout_height="wrap_content"
+        android:layout_marginStart="32dp"
         android:layout_marginTop="8dp"
+        android:layout_marginEnd="32dp"
         android:backgroundTint="@color/primary"
         android:onClick="handleOnClickOpenGallery"
         android:text="Open Gallery"
@@ -69,9 +107,11 @@
 
     <Button
         android:id="@+id/btnDBDemo"
-        android:layout_width="wrap_content"
+        android:layout_width="0dp"
         android:layout_height="wrap_content"
+        android:layout_marginStart="32dp"
         android:layout_marginTop="8dp"
+        android:layout_marginEnd="32dp"
         android:backgroundTint="@color/primary"
         android:onClick="OnClickDBDemo"
         android:text="Database Demo"
