@@ -1,8 +1,10 @@
 package `in`.nehalpatel.sdjickotlin
 
+import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.util.Log
+import android.view.View
 
 class SecondActivity : AppCompatActivity() {
 
@@ -42,5 +44,10 @@ class SecondActivity : AppCompatActivity() {
     override fun onDestroy() {
         super.onDestroy()
         Log.d(TAG, "onDestroy Activity Called : SecondActivity")
+    }
+
+    fun openLifeCycleDemoActivity(view: View) {
+        val intent = Intent(this, LifeCycleDemoActivity::class.java)
+        startActivity(intent)
     }
 }
