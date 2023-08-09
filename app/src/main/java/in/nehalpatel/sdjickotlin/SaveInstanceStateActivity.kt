@@ -3,7 +3,6 @@ package `in`.nehalpatel.sdjickotlin
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.view.View
-import android.widget.EditText
 import android.widget.TextView
 
 class SaveInstanceStateActivity : AppCompatActivity() {
@@ -14,7 +13,12 @@ class SaveInstanceStateActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_save_instance_state)
 
+        val prefs = getSharedPreferences("counter", MODE_PRIVATE)
+
+        counter = prefs.getInt("counter", 0)
+
         tvCounter = findViewById<TextView>(R.id.tvCounter)
+        tvCounter?.text = counter.toString()
     }
 
     fun decreseCounter(view: View) {
@@ -36,6 +40,10 @@ class SaveInstanceStateActivity : AppCompatActivity() {
         counter = savedInstanceState.getInt("counter")
         tvCounter?.text = counter.toString()
     }
-
-    fun onClickSaveInstance(view: View) {}
+    fun onClickSaveInstance(view: View) {
+        val pref = getSharedPreferences("counter", MODE_PRIVATE)
+        val editor = pref.edit()
+        editor.putInt("counter", counter)
+        editor.apply()
+    }
 }
