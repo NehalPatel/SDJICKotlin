@@ -18,7 +18,7 @@ class ImplicitIntentDemoActivity : AppCompatActivity() {
         startActivity(intent)
     }
     fun handleCallMe(view: View) {
-        val intent = Intent(Intent.ACTION_DIAL, Uri.parse("tel:9558815342"))
+        val intent = Intent(Intent.ACTION_DIAL, Uri.parse("tel:+919558815342"))
         startActivity(intent)
     }
 

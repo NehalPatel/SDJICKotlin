@@ -17,14 +17,13 @@ class IntentDemoActivity : AppCompatActivity() {
 
         val username = findViewById<EditText>(R.id.editTextName)
         val email = findViewById<EditText>(R.id.editTextEmail)
+        Log.d("SDJIC", username.text.toString())
+        Log.i("SDJIC", email.text.toString())
 
-        val intent = Intent(this, IntentDemoResultActivity::class.java).apply {
-            Log.d("nehal", username.text.toString())
-            Log.i("nehal", email.text.toString())
+        val intent = Intent(this, IntentDemoResultActivity::class.java)
+        intent.putExtra("username", username.text.toString())
+        intent.putExtra("email", email.text.toString())
 
-            putExtra("username", username.text.toString())
-            putExtra("email", email.text.toString())
-        }
         startActivity(intent)
     }
 }

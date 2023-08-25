@@ -57,7 +57,7 @@
         android:layout_marginTop="8dp"
         android:layout_marginEnd="32dp"
         android:backgroundTint="@color/primary"
-        android:onClick="handleSaveInstanceState"
+        android:onClick="handleOnClickEvent"
         android:text="Explicit Intent Demo"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
