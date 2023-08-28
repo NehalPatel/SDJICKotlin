@@ -1,5 +1,6 @@
 package `in`.nehalpatel.sdjickotlin
 
+import android.content.ContentValues
 import android.content.Intent
 import android.graphics.Bitmap
 import android.graphics.drawable.BitmapDrawable
@@ -36,24 +37,35 @@ class ShareDataActivity : AppCompatActivity() {
     }
 
     fun handleShareImageButton(view: View) {
-        //val file: Uri = Uri.parse("android.resource://in.nehalpatel.sdjickotlin/" + R.drawable.nidhidesai)
+        // Get the image view that we want to share
+        val iv = findViewById<ImageView>(R.id.ivNidhiDesai)
 
-        var iv:ImageView = findViewById(R.id.ivNidhiDesai)
-        val bitmap = iv.drawable.toBitmap();
+        // Get the bitmap from the image view
+        val bitmap = iv.drawable.toBitmap()
 
+        // Create a content URI for the image
+//        val uri = Uri.parse(MediaStore.Images.Media.insertImage(
+//            contentResolver,
+//            bitmap,
+//            "Nidhi Desai",
+//            null
+//        ))
 
-//        val bytes = ByteArrayOutputStream()
-//        bitmap.compress(Bitmap.CompressFormat.JPEG, 100, bytes)
+        val uri = contentResolver.insert(
+            MediaStore.Images.Media.EXTERNAL_CONTENT_URI,
+            ContentValues().apply {
+                put(MediaStore.Images.Media.DISPLAY_NAME, "Nidhi Desai")
+                put(MediaStore.Images.Media.MIME_TYPE, "image/jpeg")
+                put(MediaStore.Images.Media.RELATIVE_PATH, "Pictures/")
+            }
+        )
 
-        val path = MediaStore.Images.Media.insertImage(contentResolver, bitmap, "Nidhi Desai", null)
-
-        Log.d("devashya", path.toString())
-
-        val uri = Uri.parse(path)
-
+        // Create an intent to share the image
         val shareIntent = Intent(Intent.ACTION_SEND)
         shareIntent.type = "image/*"
         shareIntent.putExtra(Intent.EXTRA_STREAM, uri)
+
+        // Start the share activity
         startActivity(shareIntent)
     }
 }

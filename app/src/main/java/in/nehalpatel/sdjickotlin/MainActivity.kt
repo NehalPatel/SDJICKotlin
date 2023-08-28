@@ -48,4 +48,9 @@ class MainActivity : AppCompatActivity() {
         val intent = Intent(this, SaveInstanceStateActivity::class.java)
         startActivity(intent)
     }
+
+    fun OnClickStudentRegistration(view: View) {
+        val intent = Intent(this, StudentsActivity::class.java)
+        startActivity(intent)
+    }
 }
