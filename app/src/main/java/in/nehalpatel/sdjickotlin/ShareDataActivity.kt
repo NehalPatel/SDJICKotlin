@@ -44,21 +44,21 @@ class ShareDataActivity : AppCompatActivity() {
         val bitmap = iv.drawable.toBitmap()
 
         // Create a content URI for the image
-//        val uri = Uri.parse(MediaStore.Images.Media.insertImage(
-//            contentResolver,
-//            bitmap,
-//            "Nidhi Desai",
-//            null
-//        ))
+        val uri = Uri.parse(MediaStore.Images.Media.insertImage(
+            contentResolver,
+            bitmap,
+            "Nidhi Desai",
+            null
+        ))
 
-        val uri = contentResolver.insert(
-            MediaStore.Images.Media.EXTERNAL_CONTENT_URI,
-            ContentValues().apply {
-                put(MediaStore.Images.Media.DISPLAY_NAME, "Nidhi Desai")
-                put(MediaStore.Images.Media.MIME_TYPE, "image/jpeg")
-                put(MediaStore.Images.Media.RELATIVE_PATH, "Pictures/")
-            }
-        )
+//        val uri = contentResolver.insert(
+//            MediaStore.Images.Media.EXTERNAL_CONTENT_URI,
+//            ContentValues().apply {
+//                put(MediaStore.Images.Media.DISPLAY_NAME, "Nidhi Desai")
+//                put(MediaStore.Images.Media.MIME_TYPE, "image/jpeg")
+//                put(MediaStore.Images.Media.RELATIVE_PATH, "Pictures/")
+//            }
+//        )
 
         // Create an intent to share the image
         val shareIntent = Intent(Intent.ACTION_SEND)

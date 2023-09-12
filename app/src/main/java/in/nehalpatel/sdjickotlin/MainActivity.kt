@@ -53,4 +53,9 @@ class MainActivity : AppCompatActivity() {
         val intent = Intent(this, StudentsActivity::class.java)
         startActivity(intent)
     }
+
+    fun OnClickLocationDemo(view: View) {
+        val intent = Intent(this, LocationDemoActivity::class.java)
+        startActivity(intent)
+    }
 }
